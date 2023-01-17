@@ -1,18 +1,19 @@
 import React from 'react'
+import HomeSection from '../../components/HomeSection'
+import Pricing from '../../components/Pricing'
 
-// import Cards from '../../components/Cards'
-// import Footer from '../../components/Footer'
-// import SectionOne from '../../components/SectionOne'
-
+import { homeObjOne,homeObjThree,homeObjFour } from './Data'
 
 
 
 function Home() {
   return (
     <>
-    {/* <SectionOne/>
-    <Cards/>
-    <Footer/> */}
+    <HomeSection {...homeObjOne}/>
+    <HomeSection {...homeObjThree}/>
+    <HomeSection {...homeObjFour}/>
+    <Pricing/>
+    
  
     </>
   )

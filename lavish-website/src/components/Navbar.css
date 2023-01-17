@@ -18,6 +18,10 @@
     font-size: 1.5rem;
     cursor: pointer;
     text-decoration: none;
+    display: flex;
+}
+.navbar-logo > i{
+    font-size: 1.8rem;
 }
 .nav-menu{
     display: grid;

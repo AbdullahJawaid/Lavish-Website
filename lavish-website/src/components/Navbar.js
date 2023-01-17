@@ -19,11 +19,17 @@ function Navbar() {
         setClick(false);
 
     }
+    useEffect(() =>{
+        handleMobileClick();
+        handleMobileMenu ();
+
+
+    },[])
 
   return (
     <>
     <nav className='navbar-items'>
-    <Link to='/' className='navbar-logo' onClick={handleMobileMenu}><h1>Abdullah</h1></Link>
+    <Link to='/' className='navbar-logo' onClick={handleMobileMenu}><i className="fa-solid fa-fingerprint"></i><h1>LAVISH</h1></Link>
 
         <div className="menu-icon" onClick={handleMobileClick}>
         <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
@@ -33,13 +39,14 @@ function Navbar() {
             {MenuItems.map((item,index)=>{
                 return(
                     <li key={index}>
-                    <Link to={item.url} className={item.cName}><i className={item.icon}></i> {item.title}</Link>
+                    <Link to={item.url} className={item.cName} onClick={handleMobileClick}><i className={item.icon}></i> {item.title}</Link>
                 </li>
 
                 )
 
             })}
-            <button className='sign-up-btn'>Sign Up</button>
+            <Link to='./signup'> <button className='sign-up-btn'>Sign Up</button></Link>
+           
           
         </ul>
     </nav>
